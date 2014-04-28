@@ -1,0 +1,12 @@
+<div class="page-header">
+  <h1>Venues <small class="pull-right"><button ng-click="addVenueModal()" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span> Add Venue</button></small></h1>
+</div>
+<ul class="list-group">
+  <li class="list-group-item h3" ng-repeat="(key, venue) in venues">
+    {{venue.name}}
+    <div class="btn-group pull-right">
+      <button ng-click="editVenue(key, venue)" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+      <button ng-click="removeVenue(key)" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
+    </div>
+  </li>
+</ul>

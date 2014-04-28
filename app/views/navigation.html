@@ -1,0 +1,37 @@
+<nav ng-controller="Navigation" class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Treefort Music Fest</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/admin">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+      <ul ng-cloak class="nav navbar-nav navbar-right">
+<!--           <li ng-hide="currentUser"><a href="" ng-click="signUpForm()">Sign Up</a></li> -->
+          <li style="padding-right: 20px;" ng-hide="currentUser"><a href="" ng-click="signInForm()">Sign In</a></li>
+      </ul>
+      <div style="margin-right: 20px;" class="btn-group navbar-right">
+        <button ng-cloak ng-if="currentUser" type="button" class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown">
+          <img ng-cloak align="left" class="img-circle" height="20px" width="20px" ng-src="https://graph.facebook.com/{{currentUser.id}}/picture" />
+          &nbsp;{{currentUser.displayName}} <span class="caret"></span>
+        </button>
+        <ul ng-show="currentUser" style="" class="dropdown-menu" role="menu">
+          <li><a href="#/admin">Admin Panel</a></li>
+          <li class="divider"></li>
+          <li ng-show="currentUser"><a href="" ng-click="logOut()">Log Out</a></li>
+        </ul>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><!-- End Navigation -->
