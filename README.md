@@ -14,9 +14,9 @@ This project was generated using the [Yeoman AngularJS generator](https://github
 
 **Step 4:** Change directories into the repo and run `npm install` to get all the modules for this project.
 
-**Step 5:** Run `bower install` to grab all the front-end dependancies.
+**Step 5:** Run `bower install` to grab all the front-end dependancies. Run `npm install -g bower` if you don't have [Bower](http://bower.io/).
 
-**Step 6:** Finally run `grunt serve` and wait for the boilerplate project to open on http://127.0.0.1:9000/ in your browser of choice.
+**Step 6:** Finally run `grunt serve` and wait for the boilerplate project to open on http://127.0.0.1:9000/ in your browser of choice. If you don't have [Grunt](http://gruntjs.com/getting-started) then run `npm install -g grunt` and `npm install -g grunt-cli`.
 
 ## Resources
 * [AngularJS](https://angularjs.org/)
