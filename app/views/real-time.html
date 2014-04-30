@@ -1,0 +1,10 @@
+<div class="page-header">
+  <h1>Real-time <small>Follow Treefort as it's happening...</small></h1>
+</div>
+<ul class="list-group">
+  <li class="list-group-item h3" ng-repeat="venue in venues">
+    <span ng-if="venue.capacity == 'Full'" class="label label-danger">{{venue.capacity}}</span>
+    <span ng-if="venue.capacity == 'Not Full'" class="label label-info">{{venue.capacity}}</span> 
+    {{venue.name}} - <small>{{venue.currentEvent}}
+  </li>
+</ul>

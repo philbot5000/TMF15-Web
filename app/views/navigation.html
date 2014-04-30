@@ -14,8 +14,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#/admin">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li ng-class="getClass('/artists')"><a href="#/artists">Artists</a></li>
+        <li ng-class="getClass('/venues')"><a href="#/venues">Venues</a></li>
+        <li ng-class="getClass('/real-time')"><a href="#/real-time">Real-time</a></li>
+
       </ul>
       <ul ng-cloak class="nav navbar-nav navbar-right">
 <!--           <li ng-hide="currentUser"><a href="" ng-click="signUpForm()">Sign Up</a></li> -->

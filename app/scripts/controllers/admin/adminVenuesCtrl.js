@@ -4,7 +4,7 @@ angular.module('TMF15')
 .controller('AdminVenuesCtrl', ['$scope', '$modal', '$firebase', function ($scope, $modal, $firebase) {
 
   $scope.venues = $firebase(new Firebase('https://tmf15.firebaseio.com/venues'));
-  console.log($scope.venues);
+  //console.log($scope.venues);
 
   $scope.addVenueModal = function () {
     $modal.open({

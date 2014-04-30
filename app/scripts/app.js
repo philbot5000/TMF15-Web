@@ -30,6 +30,14 @@ angular
         controller: 'AdminVenuesCtrl',
         loginRequired: true
       })
+      .when('/venues', {
+        templateUrl: 'views/venues.html',
+        controller: 'VenuesCtrl'
+      })
+      .when('/real-time', {
+        templateUrl: 'views/real-time.html',
+        controller: 'RealTimeCtrl'
+      })
       .otherwise({
         redirectTo: '/',
         loginRequired: false

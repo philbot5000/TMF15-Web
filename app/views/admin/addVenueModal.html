@@ -14,6 +14,39 @@
         <label>Venue Address:</label>
         <input class="form-control input-lg" required name="venue.address" type="text" ng-model="venue.address" placeholder="Enter Address">
       </div>
+      <div class="form-group">
+        <label>Image URL:</label>
+        <input class="form-control input-lg" required name="venue.imageUrl" type="text" ng-model="venue.imageUrl" placeholder="Enter Address">
+      </div>
+      <div class="form-group">
+        <label>Latitude & Longitude</label>
+        <form class="form-inline" role="form">
+        <div class="form-group">
+          <input ng-model="venue.geo.lat" type="number" class="form-control" placeholder="Latitude">
+        </div>
+        <div class="form-group">
+          <input ng-model="venue.geo.lon" type="number" class="form-control" placeholder="Longitude">
+        </div>
+      </form>
+      </div>
+      <div class="form-group">
+        <label>Ages:</label>
+        <select ng-model="venue.ages" class="form-control">
+          <option>All Ages</option>
+          <option>18+</option>
+          <option>21+</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Select Capacity:</label>
+        <select ng-model="venue.capacity" class="form-control">
+          <option>Not Full</option>
+          <option>Full</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Description:</label>
+        <textarea ng-model="venue.description" class="form-control" rows="6"></textarea>
         <br />
         <p ng-if="venueEdit"><button class="pull-right btn btn-warning btn-lg" ng-click="saveVenue(key, venue)">Update</button></p>
         <p ng-if="!venueEdit"><button class="pull-right btn btn-info btn-lg" ng-click="addVenue(venue)"><span class="glyphicon glyphicon-ok"></span> Save</button></p>
