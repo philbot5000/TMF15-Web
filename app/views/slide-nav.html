@@ -1,0 +1,39 @@
+<div ng-controller="Navigation" class="navbar navbar-fixed-top navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navbar-offcanvas" data-canvas="body">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Project name</a>
+  </div>
+  <div class="navbar-offcanvas offcanvas navmenu-fixed-left">
+    <a data-toggle="offcanvas" data-target=".navbar-offcanvas" class="navmenu-brand" href="#">Project name</a>
+    <ul style="font-size: 1.2em; font-height: 2.4em; text-align: left; margin-right: 20px;" class="nav navbar-nav">
+      <li ng-class="getClass('/artists')">
+        <a data-toggle="offcanvas" data-target=".navbar-offcanvas" href="#/artists">Artists</a>
+      </li>
+      <li ng-class="getClass('/venues')">
+        <a data-toggle="offcanvas" data-target=".navbar-offcanvas" href="#/venues">Venues</a>
+      </li>
+      <li ng-class="getClass('/real-time')">
+        <a data-toggle="offcanvas" data-target=".navbar-offcanvas" href="#/real-time">Real-time</a>
+      </li>
+    </ul>
+    <ul ng-cloak class="nav navbar-nav navbar-right">
+      <li style="padding-right: 20px;" ng-hide="currentUser"><a href="" ng-click="signInForm()">Sign In</a></li>
+      <li style="margin-right: 20px;" ng-cloak ng-if="currentUser" class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <img ng-cloak align="left" class="img-circle" height="20px" width="20px" ng-src="https://graph.facebook.com/{{currentUser.id}}/picture" />
+          &nbsp;{{currentUser.displayName}}<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#/admin">Admin Panel</a></li>
+          <li><a href="#/playlists">My Playlists <span class="badge">4</span></a></li>
+          <li><a href="#/saved-artists">Saved Events <span class="badge">22</span></a></li>
+          <li class="divider"></li>
+          <li ng-show="currentUser"><a href="" ng-click="logOut()">Log Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div><!--/.nav-collapse -->
+</div>
