@@ -7,7 +7,8 @@ angular
     'ngRoute',
     'firebase',
     'ui.bootstrap',
-    'services'
+    'services',
+    'directives.skrollr'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -45,13 +46,14 @@ angular
   })
 
 .run(function($rootScope, $location, $firebaseSimpleLogin, Auth) {
-
+    //var s = skrollr.init();
+    //console.log(s);
     $rootScope.auth = Auth.auth;
     // Check to see if user is logged in...
     $rootScope.auth.$getCurrentUser().then(function(user) {
 
       if (user) {
-        console.log(user);
+        //console.log(user);
         $rootScope.currentUser = user;
 
       } else {
